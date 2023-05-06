@@ -22,16 +22,45 @@ After building the decompensation dataset, please save the files in decompensati
 
 We provide some data SAMPLES in the folder, so that you can understand the data structure.
 
+# File location
+
+After finish running the benchmark, compress the data into data.zip, put this zip file inside StageNet folder and upload the whole folder to your google drive
+Upload the jupyter notebook to your google colab
+
+# Run this repo
+
+After putting the files to the correct location, you should use the jupyter notebook to run training/testing.
+
 # Testing model
 
+To test your weight, replace the last cell's command in the juypter notebook to
+
+```
+!python ./drive/MyDrive/StageNet/train.py --data_path='./data/' --test_mode=1 --file_name='path_to_pretrain_weight'
+```
+
+
 # Training model
+
+To train from scratch, replace the last cell's command in the juypter notebook to
+
+```
+!python ./drive/MyDrive/StageNet/train.py --data_path='./data/' --file_name='path_to_pretrain_weight' --epoch=50 --batch_size=64
+```
+
+To resume training from a weight, replace the last cell's command in the juypter notebook to
+
+```
+!python ./drive/MyDrive/StageNet/train.py --data_path='./data/' --file_name='path_to_pretrain_weight' --continueTrain=1 --epoch=50 --batch_size=64
+```
 
 # Table of results
 
 Our 'Reproduced_best_performance_weight' have the following result:
 | Model | AUPRC | AUROC | min(Re, p+) |
 | :---: | :---: | :---: | :---: |
-| Reproduced model | 0.154 | 0.858 | 0.226 | 
+| Reproduced model | 0.154 | 0.858 | 0.226 |
+| With lr decay=1e-5 | 0.156 | 0.859 | 0.232 | 
 
 # Citation to the Original Paper
 
