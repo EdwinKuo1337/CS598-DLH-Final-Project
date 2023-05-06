@@ -6,6 +6,7 @@ https://github.com/v1xerunt/StageNet
 # Dependencies
 
 Install python, pytorch. We use Python 3.7.3, Pytorch 1.1.
+
 If you plan to use GPU computation, install CUDA
 
 # Pretrain weights
