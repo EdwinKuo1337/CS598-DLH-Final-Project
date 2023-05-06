@@ -24,8 +24,9 @@ We provide some data SAMPLES in the folder, so that you can understand the data 
 
 # File location
 
-After finish running the benchmark, compress the data into data.zip, put this zip file inside StageNet folder and upload the whole folder to your google drive
-Upload the jupyter notebook to your google colab
+After finish running the benchmark, compress the data into data.zip, put this zip file inside StageNet folder and upload the whole folder to your google drive.
+
+Upload the jupyter notebook to your google colab.
 
 # Run this repo
 
