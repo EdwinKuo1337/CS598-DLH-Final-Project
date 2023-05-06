@@ -18,6 +18,13 @@ https://drive.google.com/drive/folders/18li5FKJEhwRsPM5tpttsocalH_-GaPfO?usp=sha
 
 We do not provide the MIMIC-III data itself. You must acquire the data yourself from https://mimic.physionet.org/. Specifically, download the CSVs. To run decompensation prediction task on MIMIC-III bechmark dataset, you should first build benchmark dataset according to https://github.com/YerevaNN/mimic3-benchmarks/.
 
+On generate task-specific datasets step (step 5 in the github repo), use this command:
+```
+python -m mimic3models.split_train_val .\data\decompensation\
+```
+
+It took around 2-3 hours for us to generate the benchmark dataset
+
 After building the decompensation dataset, please save the files in decompensation directory to data/ directory.
 
 We provide some data SAMPLES in the folder, so that you can understand the data structure.
