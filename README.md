@@ -28,6 +28,22 @@ After finish running the benchmark, compress the data into data.zip, put this zi
 
 Upload the jupyter notebook to your google colab.
 
+The structure of your StageNet folder should look like this:
+
+    StageNet
+    ├── saved_weights                   # trained weights will be saved here
+    │   ├── saved_weights1
+    │   ├── saved_weights2
+    │   └── ...
+    ├── utils                           # utility files
+    │   ├── utils.py
+    │   ├── readers.py
+    │   └── ...
+    ├── data.zip                        # you should put data.zip here
+    ├── model.py                        
+    ├── train.py                        
+    └── README.md
+
 # Run this repo
 
 After putting the files to the correct location, you should use the jupyter notebook to run training/testing.
