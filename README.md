@@ -57,10 +57,10 @@ To resume training from a weight, replace the last cell's command in the juypter
 
 # Table of results
 
-Our 'Reproduced_best_performance_weight' have the following result:
+Our 'Reproduced_best_performance_weight' have the following result (without the lr decay):
 | Model | AUPRC | AUROC | min(Re, p+) |
 | :---: | :---: | :---: | :---: |
-| Reproduced model | 0.154 | 0.858 | 0.226 |
+| Reproduced_best_performance_weight | 0.154 | 0.858 | 0.226 |
 | With lr decay=1e-5 | 0.156 | 0.859 | 0.232 | 
 
 # Citation to the Original Paper
