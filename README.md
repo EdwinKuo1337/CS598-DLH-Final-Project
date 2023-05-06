@@ -71,7 +71,7 @@ To test your weight, replace the last cell's command in the juypter notebook to
 To train from scratch, replace the last cell's command in the juypter notebook to
 
 ```
-!python ./drive/MyDrive/StageNet/train.py --data_path='./data/' --file_name='path_to_pretrain_weight' --epoch=50 --batch_size=64
+!python ./drive/MyDrive/StageNet/train.py --data_path='./data/' --file_name='weight_name' --epoch=50 --batch_size=64
 ```
 
 To resume training from a weight, replace the last cell's command in the juypter notebook to
