@@ -1,7 +1,12 @@
 # CS598-DLH-Final-Project
 
-This is our final project for UIUC CS 598 Deep Learning For Health Care, we reproduced StageNet and tested the claims of the paper. Their official github can be found here:
+This is our final project for UIUC CS 598 Deep Learning For Health Care, we reproduced StageNet (https://arxiv.org/abs/2001.10054) and tested the claims of the paper. Their official github can be found here:
 https://github.com/v1xerunt/StageNet
+
+# Dependencies
+
+Install python, pytorch. We use Python 3.7.3, Pytorch 1.1.
+If you plan to use GPU computation, install CUDA
 
 # Pretrain weights
 
