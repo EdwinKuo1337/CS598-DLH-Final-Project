@@ -26,6 +26,13 @@ We provide some data SAMPLES in the folder, so that you can understand the data 
 
 # Training model
 
+# Table of results
+
+Our 'Reproduced_best_performance_weight' have the following result:
+| Model | AUPRC | AUROC | min(Re, p+) |
+| :---: | :---: | :---: | :---: |
+| Reproduced model | 0.154 | 0.858 | 0.226 | 
+
 # Citation to the Original Paper
 
 ```
