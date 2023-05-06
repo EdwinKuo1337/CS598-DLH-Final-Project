@@ -15,3 +15,7 @@ We do not provide the MIMIC-III data itself. You must acquire the data yourself 
 After building the decompensation dataset, please save the files in decompensation directory to data/ directory.
 
 We provide some data SAMPLES in the folder, so that you can understand the data structure.
+
+# Testing model
+
+# Training model
