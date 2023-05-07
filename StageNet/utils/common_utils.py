@@ -165,6 +165,10 @@ class DeepSupervisionDataLoader:
                 break
 
         self._data = mas
+        # print('length of data_X = ', len(self._data['X']))
+        # print('data_ts = ', self._data['X'][:3])
+        # print('ground truth = ', self._data['ys'][:3])
+        # print('data_name = ', self._data['X'][:3])
 
     def _read_timeseries(self, ts_filename):
         ret = []
@@ -175,6 +179,15 @@ class DeepSupervisionDataLoader:
                 mas = line.strip().split(',')
                 ret.append(np.array(mas))
         return (np.stack(ret), header)
+    
+    def return_len(self):
+        print('length of data_X = ', len(self._data['X']))
+    
+    def visualize_data(self):
+        print('length of data_X = ', self._data['X'][:2])
+        print('data_ts = ', self._data['ts'][:2])
+        print('ground truth = ', self._data['ys'][:2])
+        print('data_name = ', self._data['name'][:2])
 
 
 def create_directory(directory):
