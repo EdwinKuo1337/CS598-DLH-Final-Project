@@ -11,7 +11,7 @@ If you plan to use GPU computation, install CUDA
 
 # Pretrain weights
 
-You can download the pretrain files here on my google drive, the best weight is named 'Reproduced_best_performance_weight': 
+You can download the pretrain files here on my google drive, the best weight is named 'Reproduced_best_weight': 
 https://drive.google.com/drive/folders/18li5FKJEhwRsPM5tpttsocalH_-GaPfO?usp=sharing
 
 Put the downloaded weight in the saved_weights folder under StageNet folder
@@ -82,11 +82,11 @@ To resume training from a weight, replace the last cell's command in the juypter
 
 # Table of results
 
-Our 'Reproduced_best_performance_weight' have the following result (without the lr decay):
+Our 'Reproduced_best_weight' have the following result (with and without the lr decay):
 | Model | AUPRC | AUROC | min(Re, p+) |
 | :---: | :---: | :---: | :---: |
-| Reproduced_best_performance_weight | 0.154 | 0.858 | 0.226 |
-| With lr decay=1e-5 | 0.156 | 0.859 | 0.232 | 
+| Reproduced model w/o lr decay | 0.296 | 0.904 | 0.350 |
+| Reproduced model w/ lr decay=1e-5 | 0.298 | 0.904 | 0.350 | 
 
 # Citation to the Original Paper
 
