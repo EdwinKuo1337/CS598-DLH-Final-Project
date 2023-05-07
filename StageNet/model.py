@@ -36,11 +36,11 @@ class StageNet(nn.Module):
         self.nn_scale = nn.Linear(int(hidden_dim), int(hidden_dim // 6))
         self.nn_rescale = nn.Linear(int(hidden_dim // 6), int(hidden_dim))
         self.nn_conv = nn.Conv1d(int(hidden_dim), int(self.conv_dim), int(conv_size), 1)
-        self.replace_conv = nn.Linear(in_features=10,out_features=1)
+        # self.replace_conv = nn.Linear(in_features=10,out_features=1)
         self.nn_output = nn.Linear(int(self.conv_dim), int(output_dim))
 
-        self.replace_lstm = nn.LSTMCell(int(input_dim), int(self.hidden_dim))
-        self.fix_size = nn.Linear(384,390)
+        # self.replace_lstm = nn.LSTMCell(int(input_dim), int(self.hidden_dim))
+        # self.fix_size = nn.Linear(384,390)
         
         if self.dropconnect:
             self.nn_dropconnect = nn.Dropout(p=dropconnect)
@@ -105,11 +105,11 @@ class StageNet(nn.Module):
         origin_h = []
         distance = []
         for t in range(time_step):
-            # out, c_out, h_out = self.step(input[:, t, :], c_out, h_out, time[:, t])
-            h_out, c_out = self.replace_lstm(input[:, t, :], (h_out, c_out))
+            out, c_out, h_out = self.step(input[:, t, :], c_out, h_out, time[:, t])
+            # h_out, c_out = self.replace_lstm(input[:, t, :], (h_out, c_out))
             # print('out shape = ', out.shape)
             # print('h_out shape = ', h_out.shape)
-            out = self.fix_size(h_out)
+            # out = self.fix_size(h_out)
             cur_distance = 1 - torch.mean(out[..., self.hidden_dim:self.hidden_dim+self.levels], -1)
             cur_distance_in = torch.mean(out[..., self.hidden_dim+self.levels:], -1)
             origin_h.append(out[..., :self.hidden_dim])
